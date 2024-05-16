@@ -18,7 +18,7 @@ let proxyIP = proxyIPs[Math.floor(Math.random() * proxyIPs.length)];
 let dohURL = 'https://cloudflare-dns.com/dns-query';
 
 let panelVersion = 'v2.3.5';
-let REvil = 'Freedom to Dream';
+let REvil = '';
 
 if (!isValidUUID(userID)) {
     throw new Error('uuid is not valid');
@@ -790,7 +790,7 @@ const getNormalConfigs = async (env, hostName, client) => {
     ];
 
     Addresses.forEach((addr) => {
-        let remark = ` | BpB | - ${addr}`;
+        let remark = ` 🤞🟢 - ${addr}`;
         remark = remark.length <= 30 ? remark : `${remark.slice(0,29)}...`;
 
         vlessWsTls += 'vless' + `://${userID}@${addr}:443?encryption=none&security=tls&type=ws&host=${
@@ -1532,7 +1532,7 @@ const renderHomePage = async (request, env, hostName, fragConfigs) => {
 	</head>
 	
 	<body>
-		<h1>👻 BpB panel <span style="font-size: smaller;">${panelVersion}</span> </h3>
+		<h1>📶 panel <span style="font-size: smaller;">${panelVersion}</span> </h3>
 		<div class="form-container">
             <h2>FRAGMENT SETTINGS ⚙️</h2>
 			<form id="configForm">
@@ -2090,7 +2090,7 @@ const renderLoginPage = async () => {
     </head>
     <body>
         <div class="container">
-            <h1>👻 BpB panel <span style="font-size: smaller;">${panelVersion}</span> </h3>
+            <h1>💱 panel <span style="font-size: smaller;">${panelVersion}</span> </h3>
             <div class="form-container">
                 <h2>User Login</h2>
                 <form id="loginForm">
